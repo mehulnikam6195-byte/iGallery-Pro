@@ -164,7 +164,7 @@ export default function SettingsView({ onClose, theme, onThemeChange }: Settings
         </section>
 
         <div className="text-center py-8">
-            <p className="text-[10px] text-ios-secondary-label font-bold uppercase tracking-widest">Lumina Gallery v1.4.2</p>
+            <p className="text-[10px] text-ios-secondary-label font-bold uppercase tracking-widest">iGallery-pro v1.4.2</p>
             <p className="text-[10px] text-ios-secondary-label">Designed for Android & Web</p>
         </div>
       </div>
