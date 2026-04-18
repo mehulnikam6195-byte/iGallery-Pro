@@ -260,7 +260,12 @@ export default function App() {
         return (
           <>
             <div className="fixed top-0 left-0 right-0 h-16 ios-glass z-40 flex items-center px-6 justify-between">
-                <span className="text-xl font-bold">Photos</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-ios-blue rounded-lg flex items-center justify-center text-white shadow-sm">
+                    <CameraIcon size={18} />
+                  </div>
+                  <span className="text-xl font-bold">Photos</span>
+                </div>
                 <div className="flex items-center gap-4">
                   <button 
                     onClick={() => setIsCameraOpen(true)}
@@ -336,7 +341,12 @@ export default function App() {
                 <button className="text-ios-blue active:scale-95 transition">
                   <Plus size={24} />
                 </button>
-                <span className="text-xl font-bold">Albums</span>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-ios-blue rounded-lg flex items-center justify-center text-white shadow-sm">
+                    <CameraIcon size={18} />
+                  </div>
+                  <span className="text-xl font-bold">Albums</span>
+                </div>
                 <button 
                   onClick={() => setIsCameraOpen(true)}
                   className="text-ios-blue p-2 active:scale-95 transition"

@@ -76,11 +76,11 @@ export default function SettingsView({ onClose, theme, onThemeChange }: Settings
 
       <div className="flex-1 overflow-y-auto p-4 space-y-8">
         <div className="flex flex-col items-center py-6">
-            <div className="w-20 h-20 bg-ios-blue rounded-full flex items-center justify-center text-white text-3xl font-bold mb-3 shadow-lg">
+            <div className="w-20 h-20 bg-ios-blue/10 rounded-full flex items-center justify-center text-ios-blue mb-3 shadow-sm">
                 <User size={40} />
             </div>
-            <h2 className="text-xl font-bold">Manoj Nikam</h2>
-            <p className="text-ios-secondary-label text-sm">manoj2233nikam@gmail.com</p>
+            <h2 className="text-xl font-bold">Lumina Gallery Account</h2>
+            <p className="text-ios-secondary-label text-sm tracking-wide">Syncing to iCloud</p>
         </div>
 
         <section>
