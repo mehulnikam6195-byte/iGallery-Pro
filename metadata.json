@@ -1,0 +1,8 @@
+{
+  "name": "Lumina Gallery",
+  "description": "A premium, iPhone-inspired photo gallery app with fluid transitions, smart categorization, and immersive viewing experiences tailored for Android and web. Requesting access to storage and media to manage your photos.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-ios-blue: #007aff;
+  --color-ios-red: #ff3b30;
+
+  /* Theme variables - will be overridden by dark class */
+  --color-ios-bg: var(--ios-bg, #ffffff);
+  --color-ios-secondary-bg: var(--ios-secondary-bg, #f2f2f7);
+  --color-ios-label: var(--ios-label, #000000);
+  --color-ios-secondary-label: var(--ios-secondary-label, #8e8e93);
+  --color-ios-separator: var(--ios-separator, rgba(60, 60, 67, 0.36));
+  --color-ios-glass-bg: var(--ios-glass-bg, rgba(255, 255, 255, 0.8));
+}
+
+@layer base {
+  :root {
+    --ios-bg: #ffffff;
+    --ios-secondary-bg: #f2f2f7;
+    --ios-label: #000000;
+    --ios-secondary-label: #8e8e93;
+    --ios-separator: rgba(60, 60, 67, 0.36);
+    --ios-glass-bg: rgba(255, 255, 255, 0.8);
+  }
+
+  .dark {
+    --ios-bg: #000000;
+    --ios-secondary-bg: #1c1c1e;
+    --ios-label: #ffffff;
+    --ios-secondary-label: #8e8e93;
+    --ios-separator: rgba(255, 255, 255, 0.15);
+    --ios-glass-bg: rgba(28, 28, 30, 0.8);
+  }
+
+  body {
+    @apply bg-ios-bg text-ios-label font-sans antialiased select-none transition-colors duration-300;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .ios-glass {
+    @apply backdrop-blur-xl bg-ios-glass-bg border-t border-ios-separator;
+  }
+  
+  .ios-active-tab {
+    @apply text-ios-blue;
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 1.5rem);
+  }
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 2px;
+}
+
+@media (min-width: 640px) {
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 4px;
+  }
+}
+
+.scroll-hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
